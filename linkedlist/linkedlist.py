@@ -1,8 +1,4 @@
 # Represents individual member in the list
-from itertools import count
-from typing import Iterator
-
-
 class Node:
     def __init__(self, data=None, next=None):
         self.data = data
