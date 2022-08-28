@@ -16,3 +16,5 @@ class Solution(object):
             else:
                 left+=1
         return -1
+
+    
