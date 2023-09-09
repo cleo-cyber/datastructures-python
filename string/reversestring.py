@@ -26,3 +26,10 @@ class Solution(object):
         while stack:
             s[index]=s.pop()
             index+=1
+
+        # Solution 3
+
+        for i in range(len(s)//2):
+            left=i
+            right=len(s)-i-1
+            s[left],s[right]=s[right],s[left]
