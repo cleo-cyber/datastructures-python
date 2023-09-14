@@ -1,0 +1,40 @@
+import math
+# Definition for singly-linked list.
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def insertGreatestCommonDivisors(self, head: [ListNode]):
+
+
+        # Insert the GCD of two adjacent node values in a linked list
+        # Approach:
+        # 1. Traverse the linked list while curr.next is not None
+        # 2. Calculate the GCD of curr.val and curr.next.val
+        # 3. Create a new node with the value of the GCD
+        # 4. Insert the new node between the curr and curr.next
+        # 5. Update curr to the next node
+        # 6. Return the head
+
+
+        
+        if head.next is None:
+            return head
+        if head is None:
+            return 
+        # dummy=curr=ListNode(0)
+        curr=head
+        
+        while curr.next:
+            # gcd = lambda curr.val, curr.next.val: curr.val if curr.next.val == 0 else gcd(curr.next.val, curr.val % curr.next.val)
+            gcd=math.gcd(curr.val,curr.next.val)
+            newNode=ListNode(gcd)
+            # curr.next=newNode
+            newNode.next=curr.next
+            curr.next=newNode
+            curr=newNode.next
+        return head
+        
