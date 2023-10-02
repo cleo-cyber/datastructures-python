@@ -16,16 +16,16 @@ def solve( num):
 # def solve( num):
 #     # Write your code here
 
-#     hashmap={}
-#     for i in num:
-#         if i not in hashmap:
-#             hashmap[i]=1
-#         else:
-#             hashmap[i]+=1
-#     for i in range(len(num)):
-#         if hashmap[num[i]]!=int(num[i]):
-#             return False
-#     return True
+    hashmap={}
+    for i in num:
+        if i not in hashmap:
+            hashmap[i]=1
+        else:
+            hashmap[i]+=1
+    for i in range(len(num)):
+        if hashmap[num[i]]!=int(num[i]):
+            return False
+    return True
 
 # # Sample test cases
 # n='1210'
